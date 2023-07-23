@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
+body {
+  background-color: #DBE9F6 !important;
+}
+body .container {
+  width: 1152px;
+}
+body header {
+  width: 100%;
+  height: 80px;
+}
+body header .container {
+  max-width: 1152px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+body header .container .logo {
+  width: 74px;
+  height: 50px;
+}
+body header .container p {
+  color: #5644C7;
+  font-family: "Montserrat";
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 3.5px;
+  margin: 0;
+  padding: 0;
+}
+body header .container .search {
+  width: 40px;
+  height: 40px;
+}
+body .Film-search {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+body .Film-search .container {
+  height: auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+body .Film-search .container .sort {
+  width: 360px;
+  height: 816px;
+  background: #fff;
+  margin: 25px 0 0 0;
+}
+body .Film-search .container .Films_Block {
+  width: 70%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 25px 10px 0 10px;
+}
+body .Film-search .container .Films_Block .films {
+  width: 164px;
+  height: 340px;
+  margin: 0 0 0 70px;
+}
+body .Film-search .container .Films_Block .films img {
+  width: 164px;
+  height: 240px;
+  border-radius: 15px;
+}
+body .Film-search .container .Films_Block .films span {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+body .footer {
+  width: 100%;
+  height: 136px;
+  margin: 15px 0 0 0;
+  background: #FFBE48;
+}
+body .footer .container {
+  height: 136px;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .footer .container .footerImg {
+  width: 120px;
+  height: 81px;
+}
+body .footer .container .footer-block {
+  width: 156px;
+  height: 106px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body .footer .container .footer-block a {
+  width: auto;
+  height: auto;
+  color: #FFF;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.8px;
+  text-decoration: none;
+}
+body .footer .container .footer-block .img {
+  width: 156px;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .footer .container .footer-block .img img {
+  width: 32px;
+  height: 32px;
+}
+body .footer .container .footer-number {
+  width: 195px;
+  height: 59px;
+  color: #FFF;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.8px;
+}

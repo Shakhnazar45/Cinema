@@ -7,23 +7,116 @@
     <link rel="icon" href="Images/icon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="node_modules/jquery/dist/jquery.js">
-    <link rel="stylesheet" href="node_modules/jquery/src/ajax.js">
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.7.0.min.js">
 </head>
 <body>
     <header>
         <div class="container">
-            <img src="Images/icon.png" alt="" class="logo">
+            <a href="index.html"><img src="Images/icon.png" alt="" class="logo"></a>
             <div class="search_bar">
                 <input type="text">
                 <img src="Images/search.png" alt="" class="search">
             </div>
         </div>
     </header>
-    <div class="container-fluid">
+    <div class="container-fluid baner">
         <div class="container">
             <div class="banner"></div>
         </div>
     </div>
+    <div class="container-fluid top-film">
+        <div class="container">
+            <p class="text">Top Films</p>
+            <div class="films-block">
+                <div class="films">
+                    <img src="Images/Bin.png" alt="" class="img">
+                    <span>Мистер Бин На Отдыхе</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid film">
+        <div class="container">
+            <div class="film-name">
+                <p>Film</p>
+                <a href="films.html">View All</a>
+            </div>
+            <div class="film-block">
+                <div class="films">
+                    <img src="Images/Bin.png" alt="" class="img">
+                    <span>Мистер Бин На Отдыхе</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid cinema">
+        <div class="container">
+            <div class="cinema-name">
+                <p>Cinemas</p>
+                <a href="cinemas.html">View All</a>
+            </div>
+            <div class="cinema-block">
+                <div class="films">
+                    <img src="Images/Bin.png" alt="" class="img">
+                    <span>Мистер Бин На Отдыхе</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <a href="index.html"><img src="Images/Footer_img.png" alt="" class="footerImg"></a>
+            <div class="footer-block">
+                <a href="films.html">Films</a>
+                <a href="cinemas.html">Cinemas</a>
+                <div class="img">
+                    <a href="#"><img src="Images/Footer_telegram.png" alt=""></a>
+                    <a href="#"><img src="Images/Footer_instagram.png" alt=""></a>
+                    <a href="#"><img src="Images/Footer_whatsapp.png" alt=""></a>
+                </div>
+            </div>
+            <div class="footer-number">
+                <span>+7 (777)-777-7777</span>
+                <span>+7 (777)-777-7777</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+<script >
+        
+    var timesToDuplicate = 4;
+    var originalBlock = document.querySelector(".films");
+    var container = document.querySelector(".films-block");
+
+    for (var i = 0; i < timesToDuplicate; i++) {
+
+      var clonedBlock = originalBlock.cloneNode(true);
+    
+      container.appendChild(clonedBlock);
+    }
+
+// =========================
+    var timesToDuplicate1 = 9;
+    var originalBlock1 = document.querySelector(".films");
+    var container1 = document.querySelector(".film-block");
+
+    for (var i = 0; i < timesToDuplicate1; i++) {
+
+      var clonedBlock1 = originalBlock1.cloneNode(true);
+    
+      container1.appendChild(clonedBlock1);
+    }
+
+//========================
+    var timesToDuplicate2 = 4;
+    var originalBlock2 = document.querySelector(".films");
+    var container2 = document.querySelector(".cinema-block");
+
+    for (var i = 0; i < timesToDuplicate2; i++) {
+
+      var clonedBlock2 = originalBlock2.cloneNode(true);
+    
+      container2.appendChild(clonedBlock2);
+    }
+</script>

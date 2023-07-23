@@ -2,6 +2,9 @@
 body {
   background-color: #DBE9F6 !important;
 }
+body .container {
+  width: 1152px;
+}
 body header {
   width: 100%;
   height: 80px;
@@ -29,6 +32,7 @@ body header .container .search_bar {
 body header .container .search_bar input {
   width: 372px;
   height: 45px;
+  background: transparent;
   border-radius: 30px;
   border: 2px solid #5644C7;
   padding-left: 15px;
@@ -41,19 +45,283 @@ body header .container .search_bar .search {
   width: 40px;
   height: 40px;
 }
-body .container-fluid {
+body .baner {
   width: 100%;
   height: 535px;
   margin-top: 15px;
+  display: none;
 }
-body .container-fluid .container {
-  max-width: 1152px;
+body .baner .container {
   height: 535px;
   padding: 0;
 }
-body .container-fluid .container .banner {
+body .baner .container .banner {
   width: 100%;
   height: 535px;
   background: #fff;
   border-radius: 30px;
+}
+body .top-film {
+  width: 100%;
+  height: 415px;
+  padding: 0;
+  margin: 0;
+}
+body .top-film .container {
+  height: 415px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body .top-film .container .text {
+  width: 203px;
+  height: 50px;
+  margin: 10px 0 0 0;
+  padding: 0;
+  color: #16009D;
+  text-align: left;
+  font-family: "Montserrat";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 3.5px;
+}
+body .top-film .container .films-block {
+  width: auto;
+  height: 340px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .top-film .container .films-block .films {
+  width: 164px;
+  height: 340px;
+  margin: 0 26px 0 26px;
+}
+body .top-film .container .films-block .films img {
+  width: 164px;
+  height: 240px;
+  border-radius: 15px;
+}
+body .top-film .container .films-block .films span {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+body .film {
+  width: 100%;
+  height: 800px;
+}
+body .film .container {
+  height: 800px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body .film .container .film-name {
+  width: 1100px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .film .container .film-name p {
+  width: auto;
+  height: auto;
+  color: #16009D;
+  font-family: "Montserrat";
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 3.5px;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+body .film .container .film-name a {
+  width: auto;
+  height: auto;
+  color: #FFA500;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  cursor: pointer;
+}
+body .film .container .film-name a:hover {
+  text-decoration: underline;
+  transition: all 2s;
+}
+body .film .container .film-block {
+  width: 1100px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+body .film .container .film-block .films {
+  width: 164px;
+  height: 340px;
+  margin: 0 26px 0 26px;
+}
+body .film .container .film-block .films img {
+  width: 164px;
+  height: 240px;
+  border-radius: 15px;
+}
+body .film .container .film-block .films span {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+body .cinema {
+  width: 100%;
+  height: 420px;
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+body .cinema .container {
+  height: 420px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body .cinema .container .cinema-name {
+  width: 1100px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .cinema .container .cinema-name p {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  color: #16009D;
+  font-family: "Montserrat";
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 3.5px;
+}
+body .cinema .container .cinema-name a {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  color: #FFA500;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+body .cinema .container .cinema-block {
+  width: 1100px;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .cinema .container .cinema-block .films {
+  width: 164px;
+  height: 340px;
+}
+body .cinema .container .cinema-block .films img {
+  width: 164px;
+  height: 240px;
+  border-radius: 15px;
+}
+body .cinema .container .cinema-block .films span {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+body .footer {
+  width: 100%;
+  height: 136px;
+  margin: 15px 0 0 0;
+  background: #FFBE48;
+}
+body .footer .container {
+  height: 136px;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .footer .container .footerImg {
+  width: 120px;
+  height: 81px;
+}
+body .footer .container .footer-block {
+  width: 156px;
+  height: 106px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body .footer .container .footer-block a {
+  width: auto;
+  height: auto;
+  color: #FFF;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.8px;
+  text-decoration: none;
+}
+body .footer .container .footer-block .img {
+  width: 156px;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .footer .container .footer-block .img img {
+  width: 32px;
+  height: 32px;
+}
+body .footer .container .footer-number {
+  width: 195px;
+  height: 59px;
+  color: #FFF;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.8px;
 }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UKCinemas</title>
+    <link rel="icon" href="Images/icon.png">
+    <link rel="stylesheet" href="cinemas.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.7.0.min.js">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html"><img src="Images/icon.png" alt="" class="logo"></a>
+            <p>Cinemas</p>
+            <img src="Images/search.png" alt="" class="search">
+        </div>
+    </header>
+
+    <div class="container-fluid Film-search">
+        <div class="container">
+            <div class="sort"></div>
+            <div class="Films_Block">
+                <div class="films">
+                    <img src="Images/Bin.png" alt="" class="img">
+                    <span>Мистер Бин На Отдыхе</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <a href="index.html"><img src="Images/Footer_img.png" alt="" class="footerImg"></a>
+            <div class="footer-block">
+                <a href="films.html">Films</a>
+                <a href="cinemas.html">Cinemas</a>
+                <div class="img">
+                    <a href="#"><img src="Images/Footer_telegram.png" alt=""></a>
+                    <a href="#"><img src="Images/Footer_instagram.png" alt=""></a>
+                    <a href="#"><img src="Images/Footer_whatsapp.png" alt=""></a>
+                </div>
+            </div>
+            <div class="footer-number">
+                <span>+7 (777)-777-7777</span>
+                <span>+7 (777)-777-7777</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script >
+        
+    var timesToDuplicate = 17;
+    var originalBlock = document.querySelector(".films");
+    var container = document.querySelector(".Films_Block");
+
+    for (var i = 0; i < timesToDuplicate; i++) {
+
+      var clonedBlock = originalBlock.cloneNode(true);
+    
+      container.appendChild(clonedBlock);
+    }
+</script>
