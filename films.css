@@ -1,6 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
 body {
+  /* Handle */
+  /* Handle on hover */
   background-color: #DBE9F6 !important;
+}
+body ::-webkit-scrollbar {
+  width: 10px;
+}
+body ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+body ::-webkit-scrollbar-thumb {
+  background: #888;
+}
+body ::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 body .container {
   width: 1152px;
@@ -54,6 +68,43 @@ body .Film-search .container .sort {
   height: 816px;
   background: #fff;
   margin: 25px 0 0 0;
+  padding: 15px 0 0 15px;
+  position: sticky;
+  top: 0;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.5);
+}
+body .Film-search .container .sort p {
+  color: #5644C7;
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+body .Film-search .container .sort .cities {
+  width: auto;
+  height: 745px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+body .Film-search .container .sort .cities .cityBlock {
+  width: auto;
+  height: auto;
+}
+body .Film-search .container .sort .cities .cityBlock .CityCheck {
+  width: 15px;
+  height: 15px;
+}
+body .Film-search .container .sort .cities .cityBlock .CityText {
+  color: #5644C7;
+  font-family: "Montserrat";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0 0 0 10px;
 }
 body .Film-search .container .Films_Block {
   width: 70%;
@@ -67,22 +118,26 @@ body .Film-search .container .Films_Block .films {
   width: 164px;
   height: 340px;
   margin: 0 0 0 70px;
-}
-body .Film-search .container .Films_Block .films img {
-  width: 164px;
-  height: 240px;
-  border-radius: 15px;
-  margin: 0 0 10px 0;
-}
-body .Film-search .container .Films_Block .films span {
-  margin: 0 0 0 0;
-  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column-reverse;
   color: #000;
   font-family: Montserrat;
   font-size: 19px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  user-select: none;
+}
+body .Film-search .container .Films_Block .films img {
+  width: 164px;
+  height: 240px;
+  border-radius: 15px;
+  margin: 0 0 10px 0;
 }
 body .footer {
   width: 100%;
@@ -98,8 +153,8 @@ body .footer .container {
   align-items: center;
 }
 body .footer .container .footerImg {
-  width: 120px;
-  height: 81px;
+  width: 105px;
+  height: 75px;
 }
 body .footer .container .footer-block {
   width: 156px;

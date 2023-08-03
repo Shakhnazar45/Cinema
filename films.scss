@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
 body{
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888; 
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
     background-color: #DBE9F6 !important;
     .container{
         width: 1152px;
@@ -58,6 +74,46 @@ body{
                 background: #fff;
 
                 margin: 25px 0 0 0;
+                padding: 15px 0 0 15px;
+                position: sticky;
+                top: 0;
+
+                border-radius: 30px;
+                background: rgba(255, 255, 255, 0.50);
+                
+
+                p{
+                    color: #5644C7;
+                    font-family: "Montserrat";
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+                .cities{
+                    width: auto;
+                    height: 745px;
+                    display: flex;
+                    flex-direction: column;
+                    overflow-y: scroll;
+                    .cityBlock{
+                        width: auto;
+                        height: auto;
+                        .CityCheck{
+                            width: 15px;
+                            height: 15px;
+                        }
+                        .CityText{
+                            color: #5644C7;
+                            font-family: "Montserrat";
+                            font-size: 17px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                            margin: 0 0 0 10px;
+                        }
+                    }
+                }
             }
             .Films_Block{
                 width: 70%;
@@ -72,24 +128,33 @@ body{
                     width: 164px;
                     height: 340px;
                     margin: 0 0 0 70px;
+                    display: flex;
+                    justify-content: flex-end;
+                    flex-direction: column-reverse;
+
+                    color: #000;
+                    font-family: Montserrat;
+                    font-size: 19px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    cursor: pointer;
+                    user-select: none;
+                    
                     img{
                         width: 164px;
                         height: 240px;
                         border-radius: 15px;
                         margin: 0 0 10px 0;
-                    }
-                    span{
-                        margin: 0 0 0 0;
-                        padding: 0;
-    
-                        color: #000;
-                        font-family: Montserrat;
-                        font-size: 19px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: normal;
+
+                        
                     }
                 }
+                
             }
         }
     }
@@ -109,8 +174,8 @@ body{
             align-items: center;
             
             .footerImg{
-                width: 120px;
-                height: 81px;
+                width: 105px;
+                height: 75px;
             }
             .footer-block{
                 width: 156px;

@@ -21,11 +21,8 @@
     <div class="container-fluid Film-search">
         <div class="container">
             <div class="sort"></div>
-            <div class="Films_Block">
-                <div class="films">
-                    <img src="Images/Bin.png" alt="" class="img">
-                    <span>Мистер Бин На Отдыхе</span>
-                </div>
+            <div class="Films_Block" id="cinema">
+                
             </div>
         </div>
     </div>
@@ -50,16 +47,37 @@
     </div>
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="node_modules/axios/dist/axios.js"></script>
 <script >
         
-    var timesToDuplicate = 17;
-    var originalBlock = document.querySelector(".films");
-    var container = document.querySelector(".Films_Block");
+    axios.get('Cinemas.json')
+      .then(function (response) {
+        // Когда запрос завершен успешно, обрабатываем данные JSON
+        var filmsData = response.data.vue_cinemas;
 
-    for (var i = 0; i < timesToDuplicate; i++) {
+        // Получаем элемент блока "films"
+        var filmsBlock = document.getElementById('cinema');
 
-      var clonedBlock = originalBlock.cloneNode(true);
-    
-      container.appendChild(clonedBlock);
-    }
+        // Создаем элементы для каждого фильма в JSON и добавляем их в блок "films"
+        filmsData.forEach(function (film) {
+          var filmDiv = document.createElement('div');
+          filmDiv.classList.add('films');
+
+          var filmImg = document.createElement('img');
+          filmImg.src = 'Images/Bin.png'; // Замените на ссылку на изображение для каждого фильма
+
+          var filmName = document.createElement('span');
+          filmDiv.innerText = film.name;
+
+          filmDiv.appendChild(filmImg);
+        //   filmDiv.appendChild(filmName);
+
+          filmsBlock.appendChild(filmDiv);
+        });
+      })
+      .catch(function (error) {
+        // Обрабатываем ошибку при запросе файла JSON
+        console.error('Ошибка при чтении данных:', error);
+      });
 </script>

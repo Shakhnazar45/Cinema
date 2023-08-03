@@ -41,11 +41,8 @@
                 <p>Film</p>
                 <a href="films.html">View All</a>
             </div>
-            <div class="film-block">
-                <div class="films">
-                    <img src="Images/Bin.png" alt="" class="img">
-                    <span>Мистер Бин На Отдыхе</span>
-                </div>
+            <div class="film-block" id="films">
+                
             </div>
         </div>
     </div>
@@ -55,11 +52,8 @@
                 <p>Cinemas</p>
                 <a href="cinemas.html">View All</a>
             </div>
-            <div class="cinema-block">
-                <div class="films">
-                    <img src="Images/Bin.png" alt="" class="img">
-                    <span>Мистер Бин На Отдыхе</span>
-                </div>
+            <div class="cinema-block" id="cinema">
+                
             </div>
         </div>
     </div>
@@ -83,6 +77,8 @@
     </div>
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="node_modules/axios/dist/axios.js"></script>
 <script >
         
     var timesToDuplicate = 4;
@@ -97,26 +93,62 @@
     }
 
 // =========================
-    var timesToDuplicate1 = 9;
-    var originalBlock1 = document.querySelector(".films");
-    var container1 = document.querySelector(".film-block");
+        axios.get('films.json')
+          .then(function (response) {
+            // Когда запрос завершен успешно, обрабатываем данные JSON
+            var filmsData = response.data.films;
 
-    for (var i = 0; i < timesToDuplicate1; i++) {
+            // Получаем элемент блока "films"
+            var filmsBlock = document.getElementById('films');
 
-      var clonedBlock1 = originalBlock1.cloneNode(true);
-    
-      container1.appendChild(clonedBlock1);
-    }
+            // Создаем элементы для каждого фильма в JSON и добавляем их в блок "films"
+              for(var i = 0; i<=10; i++){
+                var FilmName = filmsData[i].name;
+                var filmDiv = document.createElement('div');
+                filmDiv.classList.add('films');
+
+                var filmImg = document.createElement('img');
+                filmImg.src = 'Images/Bin.png'; // Замените на ссылку на изображение для каждого фильма
+                filmDiv.innerText = FilmName;
+
+                filmDiv.appendChild(filmImg);
+            //     filmDiv.appendChild(filmName);
+
+                filmsBlock.appendChild(filmDiv);
+              }
+          })
+          .catch(function (error) {
+            // Обрабатываем ошибку при запросе файла JSON
+            console.error('Ошибка при чтении данных:', error);
+          });
 
 //========================
-    var timesToDuplicate2 = 4;
-    var originalBlock2 = document.querySelector(".films");
-    var container2 = document.querySelector(".cinema-block");
+        axios.get('Cinemas.json')
+          .then(function (response) {
+            // Когда запрос завершен успешно, обрабатываем данные JSON
+            var filmsData = response.data.vue_cinemas;
 
-    for (var i = 0; i < timesToDuplicate2; i++) {
+            // Получаем элемент блока "films"
+            var filmsBlock = document.getElementById('cinema');
 
-      var clonedBlock2 = originalBlock2.cloneNode(true);
-    
-      container2.appendChild(clonedBlock2);
-    }
+            // Создаем элементы для каждого фильма в JSON и добавляем их в блок "films"
+              for(var i = 0; i<=4; i++){
+                var FilmName = filmsData[i].name;
+                var filmDiv = document.createElement('div');
+                filmDiv.classList.add('films');
+
+                var filmImg = document.createElement('img');
+                filmImg.src = 'Images/Bin.png'; // Замените на ссылку на изображение для каждого фильма
+                filmDiv.innerText = FilmName;
+
+                filmDiv.appendChild(filmImg);
+            //     filmDiv.appendChild(filmName);
+
+                filmsBlock.appendChild(filmDiv);
+              }
+          })
+          .catch(function (error) {
+            // Обрабатываем ошибку при запросе файла JSON
+            console.error('Ошибка при чтении данных:', error);
+        });
 </script>
