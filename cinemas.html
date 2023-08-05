@@ -51,7 +51,7 @@
 <script src="node_modules/axios/dist/axios.js"></script>
 <script >
         
-    axios.get('Cinemas.json')
+    axios.get('http://13.41.73.108/api/cities')
       .then(function (response) {
         // Когда запрос завершен успешно, обрабатываем данные JSON
         var filmsData = response.data.vue_cinemas;
