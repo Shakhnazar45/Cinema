@@ -53,11 +53,51 @@ body{
             display: flex;
             justify-content: space-between;
             .sort{
-                width: 360px;
-                height: 816px;
+                width: 340px;
+                height: 380px;
                 background: #fff;
 
                 margin: 25px 0 0 0;
+                padding: 15px 0 0 15px;
+                position: sticky;
+                top: 0;
+
+                border-radius: 30px;
+                background: rgba(255, 255, 255, 0.50);
+                
+
+                p{
+                    color: #5644C7;
+                    font-family: "Montserrat";
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+                .cities{
+                    width: auto;
+                    height: 300px;
+                    display: flex;
+                    flex-direction: column;
+                    overflow-y: scroll;
+                    .cityBlock{
+                        width: auto;
+                        height: auto;
+                        .CityCheck{
+                            width: 15px;
+                            height: 15px;
+                        }
+                        .CityText{
+                            color: #5644C7;
+                            font-family: "Montserrat";
+                            font-size: 17px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                            margin: 0 0 0 10px;
+                        }
+                    }
+                }
             }
             .Films_Block{
                 width: 70%;

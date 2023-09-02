@@ -23,24 +23,31 @@ body header .container .logo {
   height: 50px;
 }
 body header .container .search_bar {
-  width: 350px;
+  width: 250px;
   height: 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-body header .container .search_bar input {
-  width: 300px;
-  height: 45px;
-  background: transparent;
-  border-radius: 30px;
-  border: 2px solid #5644C7;
-  padding-left: 15px;
-  font-family: "Montserrat";
+body header .container .search_bar a {
+  width: auto;
+  height: auto;
+  color: #FFA500;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
   font-weight: 500;
-  outline: none;
-  font-size: 18px;
-  color: #5644C7;
+  line-height: normal;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+body header .container .search_bar a:hover {
+  color: #16009D;
+  text-decoration: underline;
+  text-decoration-color: #FFA500;
+  transition: all 0.5s;
 }
 body header .container .search_bar .search {
   width: 37px;
@@ -101,21 +108,24 @@ body .top-film .container .films-block .films {
   width: 164px;
   height: 340px;
   margin: 0 26px 0 26px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column-reverse;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
 }
 body .top-film .container .films-block .films img {
   width: 164px;
   height: 240px;
   border-radius: 15px;
-}
-body .top-film .container .films-block .films span {
-  margin: 0;
-  padding: 0;
-  color: #000;
-  font-family: Montserrat;
-  font-size: 21px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
 }
 body .film {
   width: 100%;
@@ -191,7 +201,6 @@ body .film .container .film-block .films {
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
-  user-select: none;
 }
 body .film .container .film-block .films img {
   width: 164px;
@@ -270,7 +279,6 @@ body .cinema .container .cinema-block .films {
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
-  user-select: none;
 }
 body .cinema .container .cinema-block .films img {
   width: 164px;

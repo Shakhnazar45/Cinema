@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UKCinemas</title>
+    <link rel="icon" href="Images/icon.png">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Подключение Slick Carousel -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html"><img src="Images/icon.png" alt="" class="logo"></a>
+            <div class="search_bar">
+                <a href="films.html">Films</a>
+                <a href="cinemas.html">Cinemas</a>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid search-bar">
+        <div class="container">
+            <ul class="list">
+                <li class="link">Only: </li>
+                <li class="link"><input type="checkbox" name="Films" id="FilmsCheckbox">Films</li>
+                <li class="link"><input type="checkbox" name="Cinemas" id="CinemasCheckbox">Cinemas</li>
+                <li class="link"><input type="checkbox" name="All" id="AllCheckbox">All</li>
+            </ul>
+            <div class="searchBar">
+                <input type="text" class="searchBar_text">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid search">
+        <div class="container">
+            <div class="searchBlock" id="searchBlock">
+                <!-- <div class="block">
+                    <img src="Images/Bin.png" alt="">
+                    Мистер Бин: на Отдыхе
+                </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="node_modules/axios/dist/axios.js"></script>
+
+<script src="search.js"></script>

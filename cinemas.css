@@ -50,10 +50,47 @@ body .Film-search .container {
   justify-content: space-between;
 }
 body .Film-search .container .sort {
-  width: 360px;
-  height: 816px;
+  width: 340px;
+  height: 380px;
   background: #fff;
   margin: 25px 0 0 0;
+  padding: 15px 0 0 15px;
+  position: sticky;
+  top: 0;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.5);
+}
+body .Film-search .container .sort p {
+  color: #5644C7;
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+body .Film-search .container .sort .cities {
+  width: auto;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+body .Film-search .container .sort .cities .cityBlock {
+  width: auto;
+  height: auto;
+}
+body .Film-search .container .sort .cities .cityBlock .CityCheck {
+  width: 15px;
+  height: 15px;
+}
+body .Film-search .container .sort .cities .cityBlock .CityText {
+  color: #5644C7;
+  font-family: "Montserrat";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0 0 0 10px;
 }
 body .Film-search .container .Films_Block {
   width: 70%;

@@ -69,8 +69,8 @@ body{
             display: flex;
             justify-content: space-between;
             .sort{
-                width: 360px;
-                height: 816px;
+                width: 340px;
+                height: 380px;
                 background: #fff;
 
                 margin: 25px 0 0 0;
@@ -92,7 +92,7 @@ body{
                 }
                 .cities{
                     width: auto;
-                    height: 745px;
+                    height: 300px;
                     display: flex;
                     flex-direction: column;
                     overflow-y: scroll;

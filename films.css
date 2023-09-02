@@ -64,8 +64,8 @@ body .Film-search .container {
   justify-content: space-between;
 }
 body .Film-search .container .sort {
-  width: 360px;
-  height: 816px;
+  width: 340px;
+  height: 380px;
   background: #fff;
   margin: 25px 0 0 0;
   padding: 15px 0 0 15px;
@@ -84,7 +84,7 @@ body .Film-search .container .sort p {
 }
 body .Film-search .container .sort .cities {
   width: auto;
-  height: 745px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;

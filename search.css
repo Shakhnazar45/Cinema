@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
+body {
+  background-color: #DBE9F6 !important;
+}
+body .container {
+  width: 1152px;
+}
+body header {
+  width: 100%;
+  height: 80px;
+}
+body header .container {
+  max-width: 1152px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+body header .container .logo {
+  width: 74px;
+  height: 50px;
+}
+body header .container .search_bar {
+  width: 180px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body header .container .search_bar a {
+  width: auto;
+  height: auto;
+  color: #FFA500;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+body header .container .search_bar a:hover {
+  color: #16009D;
+  text-decoration: underline;
+  text-decoration-color: #FFA500;
+  transition: all 0.5s;
+}
+body header .container .search_bar .search {
+  width: 37px;
+  height: 37px;
+  cursor: pointer;
+}
+body .search-bar {
+  height: 80px;
+}
+body .search-bar .container {
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .search-bar .container .list {
+  width: 310px;
+  height: 35px;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFA500;
+}
+body .search-bar .container .list .link:nth-child(1) {
+  font-size: 20px;
+  margin: 0 10px 0 0;
+}
+body .search-bar .container .list .link.link:nth-child(2), body .search-bar .container .list .link:nth-child(3) {
+  margin: 0 8px 0 0;
+}
+body .search-bar .container .list input {
+  width: 15px;
+  height: 15px;
+  outline: none;
+  margin: 0 5px 0 0;
+}
+body .search-bar .container .searchBar {
+  width: 260px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+body .search-bar .container .searchBar .searchBar_text {
+  width: 255px;
+  height: 40px;
+  outline: none;
+  border-radius: 20px;
+  border: 1.5px solid #5644C7;
+  padding: 0 0 0 10px;
+  font-size: 18px;
+  font-family: "Montserrat";
+}
+body .search {
+  height: auto;
+  padding: 0;
+}
+body .search .container {
+  height: auto;
+  padding: 0;
+}
+body .search .container .searchBlock {
+  width: 1152px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px 0 12px 0;
+}
+body .search .container .searchBlock .block {
+  width: 164px;
+  height: 340px;
+  margin: 0 26px 0 26px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  color: #000;
+  font-family: "Montserrat";
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+body .search .container .searchBlock .block img {
+  width: 164px;
+  height: 240px;
+  border-radius: 15px;
+}
+body .search .container .searchBlock .NotCheck img {
+  width: 400px;
+  height: 400px;
+}

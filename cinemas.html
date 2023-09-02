@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,13 +14,15 @@
         <div class="container">
             <a href="index.html"><img src="Images/icon.png" alt="" class="logo"></a>
             <p>Cinemas</p>
-            <img src="Images/search.png" alt="" class="search">
+            <a href="search.html"><img src="Images/search.png" alt="" class="search"></a>
         </div>
     </header>
 
     <div class="container-fluid Film-search">
         <div class="container">
-            <div class="sort"></div>
+            <div class="sort" id="sort">
+                <p>By cities:</p>
+            </div>
             <div class="Films_Block" id="cinema">
                 
             </div>
@@ -47,37 +49,9 @@
     </div>
 </body>
 </html>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="node_modules/axios/dist/axios.js"></script>
-<script >
-        
-    axios.get('http://13.41.73.108/api/cities')
-      .then(function (response) {
-        // Когда запрос завершен успешно, обрабатываем данные JSON
-        var filmsData = response.data.vue_cinemas;
 
-        // Получаем элемент блока "films"
-        var filmsBlock = document.getElementById('cinema');
-
-        // Создаем элементы для каждого фильма в JSON и добавляем их в блок "films"
-        filmsData.forEach(function (film) {
-          var filmDiv = document.createElement('div');
-          filmDiv.classList.add('films');
-
-          var filmImg = document.createElement('img');
-          filmImg.src = 'Images/Bin.png'; // Замените на ссылку на изображение для каждого фильма
-
-          var filmName = document.createElement('span');
-          filmDiv.innerText = film.name;
-
-          filmDiv.appendChild(filmImg);
-        //   filmDiv.appendChild(filmName);
-
-          filmsBlock.appendChild(filmDiv);
-        });
-      })
-      .catch(function (error) {
-        // Обрабатываем ошибку при запросе файла JSON
-        console.error('Ошибка при чтении данных:', error);
-      });
-</script>
+<script src="cinemas.js"></script>

@@ -7,15 +7,18 @@
     <link rel="icon" href="Images/icon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.7.0.min.js">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Подключение Slick Carousel -->
 </head>
 <body>
     <header>
         <div class="container">
             <a href="index.html"><img src="Images/icon.png" alt="" class="logo"></a>
             <div class="search_bar">
-                <input type="text">
-                <img src="Images/search.png" alt="" class="search">
+                <a href="films.html">Films</a>
+                <a href="cinemas.html">Cinemas</a>
+                <a href="search.html"><img src="Images/search.png" alt="" class="search" id="search"></a>
             </div>
         </div>
     </header>
@@ -27,11 +30,7 @@
     <div class="container-fluid top-film">
         <div class="container">
             <p class="text">Top Films</p>
-            <div class="films-block">
-                <div class="films">
-                    <img src="Images/Bin.png" alt="" class="img">
-                    <span>Мистер Бин На Отдыхе</span>
-                </div>
+            <div class="films-block" id="TopFilm">
             </div>
         </div>
     </div>
@@ -77,78 +76,9 @@
     </div>
 </body>
 </html>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="node_modules/axios/dist/axios.js"></script>
-<script >
-        
-    var timesToDuplicate = 4;
-    var originalBlock = document.querySelector(".films");
-    var container = document.querySelector(".films-block");
 
-    for (var i = 0; i < timesToDuplicate; i++) {
-
-      var clonedBlock = originalBlock.cloneNode(true);
-    
-      container.appendChild(clonedBlock);
-    }
-
-// =========================
-        axios.get('films.json')
-          .then(function (response) {
-            // Когда запрос завершен успешно, обрабатываем данные JSON
-            var filmsData = response.data.films;
-
-            // Получаем элемент блока "films"
-            var filmsBlock = document.getElementById('films');
-
-            // Создаем элементы для каждого фильма в JSON и добавляем их в блок "films"
-              for(var i = 0; i<=10; i++){
-                var FilmName = filmsData[i].name;
-                var filmDiv = document.createElement('div');
-                filmDiv.classList.add('films');
-
-                var filmImg = document.createElement('img');
-                filmImg.src = 'Images/Bin.png'; // Замените на ссылку на изображение для каждого фильма
-                filmDiv.innerText = FilmName;
-
-                filmDiv.appendChild(filmImg);
-            //     filmDiv.appendChild(filmName);
-
-                filmsBlock.appendChild(filmDiv);
-              }
-          })
-          .catch(function (error) {
-            // Обрабатываем ошибку при запросе файла JSON
-            console.error('Ошибка при чтении данных:', error);
-          });
-
-//========================
-        axios.get('Cinemas.json')
-          .then(function (response) {
-            // Когда запрос завершен успешно, обрабатываем данные JSON
-            var filmsData = response.data.vue_cinemas;
-
-            // Получаем элемент блока "films"
-            var filmsBlock = document.getElementById('cinema');
-
-            // Создаем элементы для каждого фильма в JSON и добавляем их в блок "films"
-              for(var i = 0; i<=4; i++){
-                var FilmName = filmsData[i].name;
-                var filmDiv = document.createElement('div');
-                filmDiv.classList.add('films');
-
-                var filmImg = document.createElement('img');
-                filmImg.src = 'Images/Bin.png'; // Замените на ссылку на изображение для каждого фильма
-                filmDiv.innerText = FilmName;
-
-                filmDiv.appendChild(filmImg);
-            //     filmDiv.appendChild(filmName);
-
-                filmsBlock.appendChild(filmDiv);
-              }
-          })
-          .catch(function (error) {
-            // Обрабатываем ошибку при запросе файла JSON
-            console.error('Ошибка при чтении данных:', error);
-        });
-</script>
+<script src="main.js"></script>
